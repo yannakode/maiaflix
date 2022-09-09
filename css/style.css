@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,500&display=swap');
+
+:root {
+    --main-red: #b71c1c;
+    --secondary-red: #f44336;
+
+    --dark-grey: #222;
+    --dark: #191919;
+    --black: #000;
+    --white: #fff;
+    
+    --success: #4caf50;
+    --danger: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--black);
+    color: var(--white);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+#nav{
+    position: fixed;
+    background: var(--black);
+    border-bottom: 4px solid var(--secondary-red);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#nav h1{
+    margin: 0.5rem;
+    font-size: 1.75rem;
+    color: var(--main-red);
+}
+
+#nav span{
+    margin: 0 0.5rem 0 0;
+    font-size: 1.5rem;
+}
+
+#nav a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*content*/
+
+#content{
+    width: 100%;
+}
+
+#content h3{
+    padding-top: 10px;
+}
+
+#ctn-main{
+    margin-top: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-grey);
+    width: 100%;
+    height: 390px;
+}
+
+iframe{
+    border-radius: 10px;
+}
+
+/* .categorias */
+.category{
+    display: flex;
+    align-items: center;
+    height: 180px;
+    width: 680px;
+}
+
+.videos{
+    display: flex;
+    width: 640px;
+    gap: 1rem;
+}
+
+.totalVideos{
+    color: white;
+}
+/*cover of videos img*/
+.cover{
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+}
+/*carrosel*/
+ul{
+    display: flex;
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+    
+    display: inline-block;
+    height: 160px;
+}
+
+li:hover{
+    cursor: pointer;
+    border: 5px solid var(--secondary-red);
+    border-radius: 10px;
+}
+
+#prevBtn, #nextBtn{
+    background: var(--secondary-red);
+    color: var(--white);
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 150px;
+    width: 50px;
+    margin: 0 0.625rem;
+    border: 0;
+}
+
+/*footer*/
+footer{
+    border-top: 4px solid var(--secondary-red);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*modal window*/
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0;
+}
+
+.modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal div{
+    width: 600px;
+    position: relative;
+    background: #fff;
+    margin: 10% auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+iframe{
+    border-radius: 10px;
+}
+
+.close{
+    text-decoration: none;
+    border-radius: 50%;
+    color: var(--white);
+    background: var(--secondary-red);
+    font-size: 16px;
+    position: absolute;
+    top: -20px;
+    left: 580px;
+    margin-top: 5px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*scrollbar*/
+body::-webkit-scrollbar {
+    width: 16px;               
+  }
+  
+body::-webkit-scrollbar-track {
+    background: #222;       
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-red); 
+    border-radius: 20px;                
+    border: 3px solid #222;
+}
+
+/*responsividade*/
+@media(max-width: 680px){
+    #ctn-main{
+        height: 350px;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .categoria{
+        width: 100%;
+    }
+
+    .videos{
+        width: 100%;
+    }
+
+    h3{
+        font-size: 1.1rem;
+    }
+
+    #prevBtn, #nextBtn{
+        width: 25px;
+    }
+
+    #prevBtn{
+        margin-left: 0.75rem;
+    }
+
+    #nextBtn{
+        margin-right: 0.75rem;
+    }
+
+    body::-webkit-scrollbar {
+        width: 10px;               
+  }
+
+}

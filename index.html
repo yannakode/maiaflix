@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="images/favicon2.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maiaflix</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<body>
+	<main>
+		<header id="nav">
+			<h1>MaiaFlix</h1> <span><a href=""><i class="far fa-user-circle">a</i></a></span>
+		</header>
+
+		<section id="content">
+
+			<!-- container video -->
+			<article id="ctn-main">
+				<iframe width="560" height="350" src="https://www.youtube.com/embed/11NJB81im1Q" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</article>
+
+			<h3 class='titleCategory'>Categoria <span class="totalVideos">0</span></h3>
+			<article class="category">
+				<button id="prevBtn" onclick="show(-1,1);">&lt;</button>
+				<ul id="list1" class="videos"></ul>
+				<button id="nextBtn" onclick="show(1,1);">&gt;</button>
+			</article>
+
+
+			<h3 class='titleCategory'>Categoria <span class="totalVideos"></span></h3>
+			<article class="category">
+				<button id="prevBtn" onclick="show(-1,2);">&lt;</button>
+				<ul id="list2" class="videos">
+					
+				</ul>
+				<button id="nextBtn" onclick="show(1,2);">&gt;</button>
+			</article>
+
+			<h3 class='titleCategory'>Categoria <span class="totalVideos"></span></h3>
+			<article class="category">
+				<button id="prevBtn" onclick="show(-1,3);">&lt;</button>
+				<ul id="list3" class="videos"></ul>
+				<button id="nextBtn" onclick="show(1,3);">&gt;</button>
+			</article>
+
+			<h3 class='titleCategory'>Categoria <span class="totalVideos"></span></h3>
+			<article class="category">
+				<button id="prevBtn" onclick="show(-1,4);">&lt;</button>
+				<ul id="list4" class="videos">
+					
+				</ul>
+				<button id="nextBtn" onclick="show(1,4);">&gt;</button>
+			</article>
+
+			<h3 class='titleCategory'>Categoria <span class="totalVideos"></span></h3>
+			<article class="category">
+				<button id="prevBtn" onclick="show(-1,5);">&lt;</button>
+				<ul id="list5" class="videos">
+					
+				</ul>
+				<button id="nextBtn" onclick="show(1,5);">&gt;</button>
+			</article>
+
+		</section>
+
+		<div id="openModal" class="modal">
+			<div>
+				<a href="#close" class="close" title="close">x</a>
+				<iframe id='iframeVideo' width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<footer id='rodape'>
+            <p>MaiaFlix &copy; Produzido por Yanna N. - 2022</p>
+        </footer>
+
+
+	</main>
+<script src="app.js"></script>
+</body>
+</html>
